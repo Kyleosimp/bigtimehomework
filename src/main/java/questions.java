@@ -158,21 +158,8 @@ public class questions {
      */
 
     public static String replaceCharacters(String str) {
-        for (int i = 0; i < str.length();){
-            if (str.charAt(i)=='f' || str.charAt(i)=='F') {
-                str = str.substring(0,i)+'7'+str.substring(++i);
-            }else if (str.charAt(i) == 's'||str.charAt(i) == 'S') {
-                str = str.substring(0, i) + '$' + str.substring(i++);
-            }else if (str.charAt(i) == '1')
-            str = str.substring(0, i) + '!' + str.substring(i++);
-            else if (str.charAt(i) == 'a'||str.charAt(i) == 'A') {
-                str = str.substring(0, i) + '@' + str.substring(i++);
-            }else {i++;
-                }
-            }
-
-        return null;
-
+        String newStringf = str.replace('f', '7').replace('s', '$').replace('1', '!').replace('a', '@');
+        return newStringf;
     }
 
     public static void main(String[] args) {
